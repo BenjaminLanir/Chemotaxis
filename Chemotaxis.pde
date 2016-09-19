@@ -9,5 +9,20 @@
  }  
  class Bacteria    
  {     
- 	//lots of java!   
+ 	//lots of java!
+ 	myX, myY, myColor;
+ 	Bacteria (x, y, z)
+ 	{
+ 		myX = x;
+ 		myY = y;
+ 		myColor = z;
+ 	}   
+ 	void move()
+ 	{
+
+ 	}
+ 	void show()
+ 	{
+ 		
+ 	}
  }    
