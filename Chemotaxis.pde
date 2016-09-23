@@ -1,21 +1,21 @@
  //declare bacteria variables here  
  Bacteria [] bacColony; 
- Predator [] predatorColony;
+ //Predator [] predatorColony;
  void setup()   
  {     
  	//initialize bacteria variables here
  	size(1024, 1024);
- 	bacColony = new Bacteria [10];
- 	predatorColony = new Predator [10];
+ 	bacColony = new Bacteria [50];
+ 	//predatorColony = new Predator [10];
  	for (int i = 0; i < bacColony.length; i++)
  	{
  		bacColony[i] = new Bacteria(512, 512);
  	}
- 	for (int w = 0; w < predatorColony.length; w++)
+ /*	for (int w = 0; w < predatorColony.length; w++)
  	{
  		predatorColony[w] = new Predator((int) (Math.random() * 1024), (int) (Math.random() * 1024));
- 	}
- }   
+ 	}*/
+ } 
  void draw()   
  {    
  	//move and show the bacteria
@@ -25,12 +25,12 @@
  	bacColony[j].show();
  	bacColony[j].move();	
  	}
- 	for (int b = 0; b < predatorColony.length; b++)
+ /*	for (int b = 0; b < predatorColony.length; b++)
  	{
  		predatorColony[b].show();
  		predatorColony[b].move();
- 	}
- }  
+ 	} */
+ }
  class Bacteria    
  {     
  	//lots of java!
@@ -43,8 +43,11 @@
  	}   
  	void move()
  	{
+        if (mouseActivated == 0)
+        {
         myX = myX + ((int) (Math.random() * 10 - 5));
         myY = myY + ((int) (Math.random() * 10 - 5));
+        }
  	}
  	void show()
  	{
@@ -52,7 +55,7 @@
  		ellipse(myX, myY, 20, 20);
  	}
  }    
- class Predator
+ /* class Predator
  {
     int preX, preY, whichOne, whichOneEqu;
     Predator(int x, int y)
@@ -98,3 +101,4 @@
     	ellipse(preX, preY, 20, 20);
     }
  }
+ */
