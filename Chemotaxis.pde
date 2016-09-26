@@ -43,11 +43,8 @@
  	}   
  	void move()
  	{
-        if (mouseActivated == 0)
-        {
         myX = myX + ((int) (Math.random() * 10 - 5));
         myY = myY + ((int) (Math.random() * 10 - 5));
-        }
  	}
  	void show()
  	{
